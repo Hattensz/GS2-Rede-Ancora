@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "./SearchPage.css";
+import "./Search.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../../assets/logo-hd.png";
 import { useForm } from "react-hook-form";
 
-function SearchPage() {
+function Search() {
   const [listaDados, setListaDados] = useState([]);
 
   const {
@@ -32,8 +32,8 @@ function SearchPage() {
     >
       <div className="container fs-1">
         <div className="d-flex flex-column align-items-center mt-5">
-          <div className="col-12 text-center">
-            <img src={logo} alt="Logo da Empresa" />
+          <div className="text-center">
+            <img className="w-50" src={logo} alt="Logo da Empresa" />
           </div>
           <div className="col-md-11 pt-5">
             <form onSubmit={handleSubmit(buscarDados)}>
@@ -103,4 +103,4 @@ function SearchPage() {
   );
 }
 
-export default SearchPage;
+export default Search;
