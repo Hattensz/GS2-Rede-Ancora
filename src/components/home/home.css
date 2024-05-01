@@ -1,0 +1,58 @@
+body {
+    background-color: #F0F0F0;
+}
+
+.bg-image {
+    background-image: url('../src/assets/bg_2x.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-blur {
+    backdrop-filter: blur(8px);
+    background: linear-gradient(#00121DD1, #003C60D1);
+}
+
+
+.btn-custom {
+    background: linear-gradient(#D02030, #2C070B);
+    border: 0px solid #F0F0F000;
+}
+
+.btn-custom:hover {
+    background: linear-gradient(#9F1B28, #480C12);
+}
+
+.btn-svg {
+    visibility: hidden;
+}
+
+.btn-svg img {
+    visibility: visible;
+}
+
+.btn-svg img:hover {
+    scale: 110%;
+}
+
+.text-blue {
+    color: #003A5D;
+}
+
+.w-custom {
+    width: calc(83.33% - 1.5rem);
+    
+}
+
+.rotate-180 {
+    rotate: 180deg;
+}
+
+.bg-dark-blue {
+    background-color: #00121D;
+}
+
+.color-red {
+    color: #D02030;
+}
