@@ -23,22 +23,5 @@ export default class WebHook {
             throw error;
         }
     }
-    static async  buscaMontadorasDeVeiculos(body){
-        const rota = "https://api-stg-catalogo.redeancora.com.br/superbusca/api/integracao/veiculo/montadoras/query"
-        return await webHook(rota, body)
-    }
-    static async  buscaFamiliasEsubFamiliasDeProdutos(body){
-        const rota = "https://api-stg-catalogo.redeancora.com.br/superbusca/api/integracao/produto/familias/query"
-        return await webHook(rota, body)
-    }
     
-    async buscaGrupoDeProdutos(body) {
-        const rota =  "https://api-stg-catalogo.redeancora.com.br/superbusca/api/integracao/produto/ultimos-niveis/query"
-        return await webHook(rota, body)
-    }
-    
-    static async buscaDeProdutos(body) {
-        const rota = "https://api-stg-catalogo.redeancora.com.br/superbusca/api/integracao/catalogo/produtos/query"
-        return await webHook(rota, body)
-    }
 }

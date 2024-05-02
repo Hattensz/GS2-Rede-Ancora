@@ -3,7 +3,7 @@ import "./Search.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../../assets/logo-hd.png";
 import { useForm } from "react-hook-form";
-
+import Busca from "../../dominio/busca/Busca";
 function Search() {
   const [listaDados, setListaDados] = useState([]);
 
@@ -16,6 +16,7 @@ function Search() {
   function buscarDados(dados) {
     setListaDados([dados]);
     console.log(dados);
+    const busca = new Busca(dados);
   }
 
   return (
@@ -45,6 +46,16 @@ function Search() {
                   type="text"
                   className="fs-1 form-control"
                   {...register("placa")}
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="nomeProduto" className="form-label text-white">
+                  Nome do produto:
+                </label>
+                <input
+                  type="text"
+                  className="fs-1 form-control"
+                  {...register("nomeProduto")}
                 />
               </div>
               <div className="mb-3">
