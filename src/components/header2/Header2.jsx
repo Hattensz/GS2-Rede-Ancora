@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/logo-hd.png";
 import "./Header2.css";
+import { Link } from "react-router-dom";
 
 function Header2() {
   return (
@@ -25,14 +26,14 @@ function Header2() {
             <div className="container">
               <ul className="navbar-nav d-flex flex-row gap-5">
                 <li className="nav-item">
-                  <a className="text-decoration-none text-light" href="/">
+                  <Link to="/" className="text-decoration-none text-light">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="text-decoration-none text-light" href="/search">
+                  <Link to="/sobre" className="text-decoration-none text-light">
                     Sobre
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <a
