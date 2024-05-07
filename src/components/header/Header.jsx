@@ -1,19 +1,36 @@
-import React from 'react'
-import './header.css'
+import React from "react";
+import "./header.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
-    return (
-        <>
-            <div className="d-flex bg-gray">
-                <img className='mt-2 ms-5' src="../src/assets/Logo-Rede-ANCORA-Institucional_1x.png" alt="Logo Rede Ancora" />
-                <div className='container-fluid mt-5 d-flex justify-content-center text-center gap-5' >
-                    <h1 className='text-blue fs-2 text-uppercase'>Home</h1>
-                    <h1 className='text-blue fs-2'>|</h1>
-                    <h1 className='text-blue fs-2 text-uppercase'>Sobre o Projeto</h1>
-                    <h1 className='text-blue fs-2'>|</h1>
-                    <h1 className='text-blue fs-2 text-uppercase'>Loja Virtual</h1>
-                </div>
-            </div>
-        </>
-    )
+  return (
+    <>
+      <img
+        className="position-absolute top-0 start-0 ms-2 mt-1"
+        src="../src/assets/Logo-Rede-ANCORA-Institucional_1x.png"
+        alt="Logo Rede Ancora"
+      />
+      <div className="d-flex bg-gray">
+        <div className="container-fluid mt-5 d-flex justify-content-center text-center gap-5 ms-5">
+          <Link to="/" className="text-decoration-none">
+            <h1 className="text-blue menu-hover fs-3 fw-semibold text-uppercase">
+              Home
+            </h1>
+          </Link>
+          <h1 className="text-blue fs-3 fw-semibold">|</h1>
+          <Link to="/sobre" className="text-decoration-none">
+            <h1 className="text-blue menu-hover fs-3 fw-semibold text-uppercase">
+              Sobre o Projeto
+            </h1>
+          </Link>
+          <h1 className="text-blue fs-3 fw-semibold">|</h1>
+          <Link to="/products" className="text-decoration-none">
+            <h1 className="text-blue menu-hover fs-3 fw-semibold text-uppercase">
+              Loja Virtual
+            </h1>
+          </Link>
+        </div>
+      </div>
+    </>
+  );
 }

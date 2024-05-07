@@ -7,6 +7,25 @@
     color: #003A5D;
 }
 
+.menu-hover {
+    position: relative;
+}
+
+.menu-hover:after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #003A5D;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: 0.5s;
+}
+
+.menu-hover:hover::after {
+    width: 100%;
+}
+
 img {
-    width: 272px;
+    width: 10rem;
 }
