@@ -1,0 +1,10 @@
+.button {
+  background: linear-gradient(to top, black, red);
+  border-radius: none;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  cursor: pointer;
+}
