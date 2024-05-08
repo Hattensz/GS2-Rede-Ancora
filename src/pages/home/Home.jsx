@@ -1,20 +1,13 @@
 import React from 'react'
 import './home.css'
-<<<<<<< HEAD
-
-=======
 import Header from '../../components/header/Header'
->>>>>>> e5af0c2340864a5fcb0b69655c6db284cc4eecc0
+
 
 export default function Home() {
     return (
         <>
             <body>
-<<<<<<< HEAD
-                {/* <Header3 /> */}
-=======
                 <Header />
->>>>>>> e5af0c2340864a5fcb0b69655c6db284cc4eecc0
                 <Main />
                 <PitchVideo />
                 <About />
