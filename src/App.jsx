@@ -1,6 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+<<<<<<< HEAD
+=======
 import "./App.css";
 import GlobalStyle from "./GlobalStyle";
+>>>>>>> e5af0c2340864a5fcb0b69655c6db284cc4eecc0
 import Home from "./pages/home/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SearchPage from "./pages/search/SearchPage";
