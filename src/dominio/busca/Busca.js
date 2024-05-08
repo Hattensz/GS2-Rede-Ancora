@@ -22,3 +22,25 @@ class Busca {
 }
 
 export default Busca;
+
+class BuscaPayload {
+    constructor(superbusca, produtoFiltro, veiculoFiltro, pagina, itensPorPagina) {
+        this.superbusca = superbusca;
+        this.produtoFiltro = produtoFiltro;
+        this.veiculoFiltro = veiculoFiltro;
+        this.pagina = pagina;
+        this.itensPorPagina = itensPorPagina;
+    }
+
+    toJSON() {
+        return {
+            superbusca: this.superbusca,
+            produtoFiltro: this.produtoFiltro,
+            veiculoFiltro: this.veiculoFiltro,
+            pagina: this.pagina,
+            itensPorPagina: this.itensPorPagina
+        };
+    }
+}
+
+

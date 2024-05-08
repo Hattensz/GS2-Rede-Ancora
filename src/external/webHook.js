@@ -1,7 +1,7 @@
 import PegarToken from "./PegarToken";
 
 export default class WebHook {
-    static async  webHook(rota, body){
+    static async fetch(rota, body) {
         try {
             const token = await PegarToken();
             return fetch(rota, {
@@ -10,7 +10,7 @@ export default class WebHook {
                     'Authorization': `Bearer ${token}`, // Adicionando o token de autorização aqui
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(body)
+                body: body ? JSON.stringify(body) : null // Verifica se o corpo da requisição está presente
             })
             .then(response => {
                 if (!response.ok) {
@@ -23,5 +23,4 @@ export default class WebHook {
             throw error;
         }
     }
-    
 }

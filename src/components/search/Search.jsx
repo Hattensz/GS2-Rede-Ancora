@@ -99,13 +99,19 @@ function Search() {
                 />
               </div>
               <div className="col-md-11 text-center mt-5">
-                <button type="button" className="button fs-1 btn me-5">
-                  Home
+                <button 
+                    onClick={() => window.location.href = "/"} // Redirecionar para a página inicial ("/")
+                    type="button" 
+                    className="button fs-1 btn me-5">
+                    Home
                 </button>
-                <button type="submit" className="button fs-1 btn">
-                  Pesquisar
+                <button 
+                    type="submit" 
+                    className="button fs-1 btn">
+                    Pesquisar
                 </button>
               </div>
+
             </form>
           </div>
         </div>
