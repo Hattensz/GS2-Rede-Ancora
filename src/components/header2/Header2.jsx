@@ -12,9 +12,9 @@ function Header2() {
           style={{ height: "25px", backgroundColor: "#003A5D" }}
         >
           <div
-            className="navbar navbar-dark position-absolute fw-bold "
+            className="navbar navbar-dark position-absolute fw-bold rounded-1"
             style={{
-              backgroundColor: "red",
+              backgroundColor: "#D02030",
               border: "2px solid #003A5D",
               top: "50%",
               right: "50px",

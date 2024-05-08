@@ -25,7 +25,7 @@ function Main() {
                         <h2 className='text-white text-center fs-2 text-uppercase fw-semibold'>Sobre o Projeto</h2>
                         <p className='text-white text-center fs-3 fw-normal'> Saiba quem somos e <br /> como o projeto foi <br /> feito!</p>
                         <div className='text-center'>
-                            <button className='btn btn-custom px-4 py-2 rounded-5' type='button'><a className='text-decoration-none text-white fs-4' href=''>Clique e saiba mais &gt;</a></button>
+                            <button className='btn btn-custom px-4 py-2 rounded-5' type='button'><a className='text-decoration-none text-white fs-4' href='/sobre'>Clique e saiba mais &gt;</a></button>
                         </div>
                     </div>
                 </div>
