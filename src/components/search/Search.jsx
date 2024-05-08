@@ -13,10 +13,11 @@ function Search() {
     formState: { errors },
   } = useForm();
 
-  function buscarDados(dados) {
-    setListaDados([dados]);
-    console.log(dados);
-    const busca = new Busca(dados);
+  async function buscarDados(dados) {
+    const { placa, nomeProduto, familia, marca } = dados;
+    const busca = new Busca(placa, familia, marca, nomeProduto);
+    
+    
   }
 
   return (
@@ -58,16 +59,7 @@ function Search() {
                   {...register("nomeProduto")}
                 />
               </div>
-              <div className="mb-3">
-                <label htmlFor="linha" className="form-label text-white">
-                  Linha:
-                </label>
-                <input
-                  type="text"
-                  className="fs-1 form-control"
-                  {...register("linha")}
-                />
-              </div>
+              
               <div className="mb-3">
                 <label htmlFor="familia" className="form-label text-white">
                   Família:
@@ -88,16 +80,7 @@ function Search() {
                   {...register("marca")}
                 />
               </div>
-              <div className="mb-3">
-                <label htmlFor="codigo" className="form-label text-white">
-                  Código:
-                </label>
-                <input
-                  type="text"
-                  className="fs-1 form-control"
-                  {...register("codigo")}
-                />
-              </div>
+              
               <div className="col-md-11 text-center mt-5">
                 <button 
                     onClick={() => window.location.href = "/"} // Redirecionar para a página inicial ("/")

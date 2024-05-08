@@ -2,19 +2,9 @@ import React from "react";
 
 function Products() {
   // Apagar placeholder depois de conectar a API
-  const placeholderProduct = {
-    id: 1,
-    name: "Nome do produto só que bem longo pra ver como fica",
-    price: 38.9,
-    image:
-      "https://http2.mlstatic.com/D_NQ_NP_615818-MLB54272990245_032023-O.webp",
-    parcel: "12x de R$ 3,24 sem juros",
-  };
+  
 
-  const products = Array.from({ length: 8 }, (_, index) => ({
-    ...placeholderProduct,
-    id: index + 1,
-  }));
+  const products = busca.produtos;
 
   return (
     <div className="row m-3 overflow-x-auto">
