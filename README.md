@@ -21,4 +21,3 @@ Este projeto possui as seguintes tags:
 ## Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para abrir um PR ou criar uma issue.
 
-## Licença
