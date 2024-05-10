@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 function Products() {
   const { buscaInstance } = useBusca();
   const [products, setProducts] = useState([]);
+  const [carrinho, setCarrinho] = useState([]);
 
   useEffect(() => {
     // Verifica se buscaInstance existe antes de acessar os produtos
@@ -11,6 +12,12 @@ function Products() {
       setProducts(buscaInstance.produtos);
     }
   }, [buscaInstance]); // <-- Adicionando buscaInstance como dependência
+
+  // Função para adicionar produto ao carrinho
+  const adicionarAoCarrinho = (produto) => {
+    setCarrinho([...carrinho, produto]);
+  };
+
 
   return (
     <div className="row m-3 overflow-x-auto">
@@ -38,7 +45,10 @@ function Products() {
                     </h2>
                   </div>
                   <p className="card-text">{product.parcel}</p>
-                  <button className="fs-2 btn btn-primary">
+                  <button
+                    className="fs-2 btn btn-primary"
+                    onClick={() => adicionarAoCarrinho(product)}
+                  >
                     Adicionar ao Carrinho
                   </button>
                 </div>

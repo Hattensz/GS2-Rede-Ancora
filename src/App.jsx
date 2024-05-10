@@ -9,6 +9,7 @@ import CadastroPage from "./pages/cadastro/CadastroPage";
 import SobreProjetoPage from "./pages/sobre-projetoo/SobreProjetoPage";
 import { BuscaProvider } from "./utils/BuscaContext";
 import CarrinhoPage from "./pages/carrinho/CarrinhoPage";
+import PagamentoPage from "./pages/pagamento/PagamentoPage"
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
             <Route path="/cadastro" element ={<CadastroPage/>} />
             <Route path="/sobre" element ={<SobreProjetoPage/>} />
             <Route path="/carrinho" element ={<CarrinhoPage/>} />
+            <Route path="/pagamento" element ={<PagamentoPage/>} />
           </Routes>
         </BuscaProvider>
       </BrowserRouter>
