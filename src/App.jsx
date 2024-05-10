@@ -7,19 +7,21 @@ import SearchPage from "./pages/search/SearchPage";
 import ProductsPage from "./pages/products/ProductsPage";
 import CadastroPage from "./pages/cadastro/CadastroPage";
 import SobreProjetoPage from "./pages/sobre-projetoo/SobreProjetoPage";
-
+import { BuscaProvider } from "./utils/BuscaContext";
 function App() {
   return (
     <>
       <BrowserRouter>
         <GlobalStyle />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/search" element={<SearchPage />} />
-          <Route path="/products" element={<ProductsPage />} />
-          <Route path="/cadastro" element ={<CadastroPage/>} />
-          <Route path="/sobre" element ={<SobreProjetoPage/>} />
-        </Routes>
+        <BuscaProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/cadastro" element ={<CadastroPage/>} />
+            <Route path="/sobre" element ={<SobreProjetoPage/>} />
+          </Routes>
+        </BuscaProvider>
       </BrowserRouter>
     </>
   );
