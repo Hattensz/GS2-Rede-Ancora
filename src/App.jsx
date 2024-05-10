@@ -8,6 +8,7 @@ import ProductsPage from "./pages/products/ProductsPage";
 import CadastroPage from "./pages/cadastro/CadastroPage";
 import SobreProjetoPage from "./pages/sobre-projetoo/SobreProjetoPage";
 import { BuscaProvider } from "./utils/BuscaContext";
+import CarrinhoPage from "./pages/carrinho/CarrinhoPage";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/cadastro" element ={<CadastroPage/>} />
             <Route path="/sobre" element ={<SobreProjetoPage/>} />
+            <Route path="/carrinho" element ={<CarrinhoPage/>} />
           </Routes>
         </BuscaProvider>
       </BrowserRouter>

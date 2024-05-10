@@ -1,14 +1,16 @@
 import { IconButton, InputAdornment, TextField } from '@mui/material';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import SearchIcon from '@mui/icons-material/Search';
+import { ShoppingCart as ShoppingCartIcon } from '@mui/icons-material';
+import { Search as SearchIcon, AccountCircle as AccountCircleIcon } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom'; // Importe useNavigate para utilizar navegação
 import "./Header3.css"; // Importe seu arquivo de estilos CSS aqui
 import LogoRedeAncora from "../../assets/logo-hd.png";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 export default function Header3() {
+    const navigate = useNavigate(); // Inicialize useNavigate
+
     function handleKeyPress(event) {
         if (event.key === 'Enter') {
-            console.log(event.target.value); // Aqui você pode fazer o que quiser com o valor digitado
+            navigate("/search"); // Use navigate para navegar para "/search"
         }
     }
 
@@ -35,12 +37,12 @@ export default function Header3() {
                         }}
                     />
 
-                    <IconButton color="" aria-label="Carrinho">
+                    <IconButton color="inherit" aria-label="Carrinho" onClick={() => navigate("/carrinho")}>
                         <ShoppingCartIcon />
                     </IconButton>
 
-                    <IconButton color="" aria-label="Conta">
-                        <AccountCircleIcon/>
+                    <IconButton color="inherit" aria-label="Conta" onClick={() => navigate("/cadastro")}>
+                        <AccountCircleIcon />
                     </IconButton>
                 </div>
             </div>
