@@ -10,10 +10,20 @@ function SignupMessage() {
         to="/cadastro"
         className="d-block text-white fs-1 text-center p-3 text-decoration-none"
       >
-        cadastre-se para receber 20% de desconto na primeira compra
+        Cadastre-se para receber 20% de desconto na primeira compra
       </Link>
     </div>
   );
 }
 
-export default SignupMessage;
+function SignupMessageImg() {
+  return (
+    <>
+      <Link to="/cadastro">
+        <img className="container-fluid p-0 m-0" src="../src/assets/banner.png" alt="20% de desconto" />
+      </Link>
+    </>
+  )
+}
+
+export default SignupMessageImg;
