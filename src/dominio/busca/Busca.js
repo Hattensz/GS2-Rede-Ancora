@@ -1,4 +1,4 @@
-import WebHook from "../../external/WebHook";
+import WebHook from "../../external/api/WebHook";
 
 class Busca {
     constructor(placa, familia, marca, nomeProduto) {
@@ -41,6 +41,8 @@ class Busca {
             console.error('Erro ao buscar produtos:', error);
         }
     }
+    
+    
 }
 
 export default Busca;

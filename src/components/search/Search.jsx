@@ -4,8 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../../assets/logo-hd.png";
 import { useForm } from "react-hook-form";
 import Busca from "../../dominio/busca/Busca";
+import { useNavigate } from 'react-router-dom';
+import { useBusca } from "../../utils/BuscaContext";
+
 function Search() {
-  const [listaDados, setListaDados] = useState([]);
+  const { setBuscaInstance } = useBusca();
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   const {
     register,
@@ -16,8 +21,9 @@ function Search() {
   async function buscarDados(dados) {
     const { placa, nomeProduto, familia, marca } = dados;
     const busca = new Busca(placa, familia, marca, nomeProduto);
-    
-    
+    setBuscaInstance(busca);
+    setLoading(true); // Sinaliza que a busca está ocorrendo
+    navigate("/products"); // Navega para a página de produtos
   }
 
   return (
@@ -99,6 +105,7 @@ function Search() {
           </div>
         </div>
       </div>
+      {loading && <div className="loading-indicator">Carregando...</div>}
     </div>
   );
 }

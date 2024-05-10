@@ -1,13 +1,15 @@
 
 import { useForm } from "react-hook-form";
 import { FormContainer, Label, Input, SubmitButton, CheckboxWrapper, Checkbox } from "./stylesCadastroForm"; // Adicionando a importação de CheckboxWrapper e Checkbox
+import Cliente from "../../dominio/cliente/Cliente";
 
 export default function CadastroForm() {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
-        console.log(data); 
-        window.location.href = "/search"
+        const {nomeCompleto, email, telefone, cpf, promocoes} = data
+        const cliente = new Cliente(nomeCompleto, email, telefone, cpf, promocoes)
+        cliente.salvarNaDataBase()
     };
     
     return (

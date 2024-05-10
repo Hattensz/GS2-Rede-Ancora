@@ -1,10 +1,16 @@
-import React from "react";
+import { useBusca } from "../../utils/BuscaContext";
+import { useEffect, useState } from "react";
 
 function Products() {
-  // Apagar placeholder depois de conectar a API
-  
+  const { buscaInstance } = useBusca();
+  const [products, setProducts] = useState([]);
 
-  const products = busca.produtos;
+  useEffect(() => {
+    // Verifica se buscaInstance existe antes de acessar os produtos
+    if (buscaInstance && buscaInstance.produtos) {
+      setProducts(buscaInstance.produtos);
+    }
+  }, [buscaInstance]); // <-- Adicionando buscaInstance como dependência
 
   return (
     <div className="row m-3 overflow-x-auto">
@@ -15,8 +21,8 @@ function Products() {
       </div>
       <div>
         <div className="row m-3">
-          {products.map((product) => (
-            <div className="col-md-6 pb-4" key={product.id}>
+          {products.map((product, index) => (
+            <div className="col-md-6 pb-4" key={index}>
               <div className="card">
                 <img
                   src={product.image}
