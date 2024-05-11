@@ -1,7 +1,8 @@
 # Challenge Rede Ancora
 
 ## Descrição
-Feito por João Vitor Brocchi, Guilherme Junuqeira e Giovanna Hatten.
+Feito com amor por <a href="https://github.com/joaovbrocchi">João Vitor Brocchi</a>, <a href="https://github.com/guilhermejunuqeira">Guilherme Junuqeira</a> e <a href="https://www.linkedin.com/in/giovannahatten/">Giovanna Hatten</a>.
+
 
 
 ## Instruções de Uso
