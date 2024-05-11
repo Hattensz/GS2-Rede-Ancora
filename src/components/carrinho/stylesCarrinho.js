@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from 'react-router-dom';
 
 // Aumentando proporcionalmente em 3x
-const scaleMultiplier = 3;
+const scaleMultiplier = 2;
 
 export const CarrinhoPageWrapper = styled.div`
     max-width: ${800 * scaleMultiplier}px;
@@ -37,6 +37,18 @@ export const ItemNome = styled.span`
 export const Preco = styled.span`
     font-weight: bold;
     font-size: ${18 * scaleMultiplier}px; /* Aumentando o tamanho da fonte para os preços */
+`;
+
+export const Imagem = styled.img`
+    width: ${50 * scaleMultiplier}px; /* Definindo o tamanho da imagem */
+    height: ${50 * scaleMultiplier}px;
+    margin-right: 2em;
+    object-fit: cover; /* Garantindo que a imagem seja ajustada proporcionalmente */
+    margin-left: ${20 * scaleMultiplier}px; /* Adicionando um espaçamento à esquerda */
+`;
+
+export const Parcel = styled.span`
+    font-size: ${18 * scaleMultiplier}px; /* Ajustando o tamanho da fonte para as parcelas */
 `;
 
 export const BotaoPagamento = styled(Link)`

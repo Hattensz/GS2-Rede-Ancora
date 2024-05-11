@@ -7,25 +7,28 @@ import SearchPage from "./pages/search/SearchPage";
 import ProductsPage from "./pages/products/ProductsPage";
 import CadastroPage from "./pages/cadastro/CadastroPage";
 import SobreProjetoPage from "./pages/sobre-projetoo/SobreProjetoPage";
-import { BuscaProvider } from "./utils/BuscaContext";
 import CarrinhoPage from "./pages/carrinho/CarrinhoPage";
 import PagamentoPage from "./pages/pagamento/PagamentoPage"
+import { useState } from "react";
 function App() {
+  const [produtos, setProdutos] = useState([])
+  const [carrinho, setCarrinho] = useState([])
+
   return (
     <>
       <BrowserRouter>
         <GlobalStyle />
-        <BuscaProvider>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/search" element={<SearchPage />} />
-            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/pagamento" element ={<PagamentoPage/>} />
             <Route path="/cadastro" element ={<CadastroPage/>} />
             <Route path="/sobre" element ={<SobreProjetoPage/>} />
-            <Route path="/carrinho" element ={<CarrinhoPage/>} />
-            <Route path="/pagamento" element ={<PagamentoPage/>} />
+
+            <Route path="/search" element={<SearchPage setProdutos={setProdutos} />} />
+            <Route path="/carrinho" element ={<CarrinhoPage carrinho={carrinho}/>} />
+            <Route path="/products" element={<ProductsPage carrinho={carrinho} produtos={produtos} setCarrinho={setCarrinho} />} />
+            
           </Routes>
-        </BuscaProvider>
       </BrowserRouter>
     </>
   );

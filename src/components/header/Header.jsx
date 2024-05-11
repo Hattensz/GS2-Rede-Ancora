@@ -29,6 +29,12 @@ export default function Header() {
               Loja Virtual
             </h1>
           </Link>
+          <h1 className="text-blue fs-3 fw-semibold">|</h1>
+          <Link to="/cadastro" className="text-decoration-none">
+            <h1 className="text-blue menu-hover fs-3 fw-semibold text-uppercase">
+              Fazer Cadastro
+            </h1>
+          </Link>
         </div>
       </div>
     </>

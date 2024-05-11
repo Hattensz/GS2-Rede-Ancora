@@ -1,9 +1,9 @@
 import Search from "../../components/search/Search";
 
-function SearchPage() {
+function SearchPage(props) {
   return (
     <>
-      <Search />
+      <Search setProdutos={props.setProdutos}/>
     </>
   );
 }

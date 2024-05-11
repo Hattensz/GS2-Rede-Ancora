@@ -6,7 +6,6 @@ class Busca {
         this.produtoFiltro = { ultimoNivel: nomeProduto, nomeFabricante: marca };
         this.veiculoFiltro = { veiculoPlaca: placa };
         this.produtos = [];
-        this.buscarProdutos();
     }
 
     toQuery() {

@@ -1,23 +1,18 @@
 import React from 'react';
-import { CarrinhoPageWrapper, CarrinhoHeader, ListaItens, ItemCarrinho, ItemNome, Preco, BotaoPagamento } from './stylesCarrinho';
+import { CarrinhoPageWrapper, CarrinhoHeader, ListaItens, ItemCarrinho, ItemNome, Preco, BotaoPagamento, Imagem, Parcel } from './stylesCarrinho'; // Importando os componentes estilizados
 import { Link } from 'react-router-dom';
 
-const Carrinho = () => {
-    // Exemplo de itens do carrinho
-    const itensCarrinho = [
-        { id: 1, nome: 'Produto 1', preco: 10 },
-        { id: 2, nome: 'Produto 2', preco: 20 },
-        { id: 3, nome: 'Produto 3', preco: 15 },
-    ];
-
+const Carrinho = (props) => {
     return (
         <CarrinhoPageWrapper>
             <CarrinhoHeader>Seu Carrinho</CarrinhoHeader>
             <ListaItens>
-                {itensCarrinho.map(item => (
+                {props.carrinho.map(item => (
                     <ItemCarrinho key={item.id}>
-                        <ItemNome>{item.nome}</ItemNome>
-                        <Preco>R${item.preco.toFixed(2)}</Preco>
+                        <ItemNome>{item.name}</ItemNome>
+                        <Preco>R${item.price.toFixed(2)}</Preco>
+                        <Imagem src={item.imagem} alt={item.name} /> {/* Adicionando a imagem do item */}
+                        <Parcel>{item.parcel}</Parcel>
                     </ItemCarrinho>
                 ))}
             </ListaItens>
