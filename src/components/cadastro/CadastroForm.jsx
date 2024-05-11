@@ -10,7 +10,7 @@ export default function CadastroForm() {
     const onSubmit = (data) => {
         const {nomeCompleto, email, telefone, cpf, promocoes} = data
         const cliente = new Cliente(nomeCompleto, email, telefone, cpf, promocoes)
-        cliente.salvarNaDataBase()
+        // cliente.salvarNaDataBase()
         navigate("/search")
     };
     
